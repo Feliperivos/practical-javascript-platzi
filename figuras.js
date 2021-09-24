@@ -26,6 +26,24 @@ function areaCirculo(radio){
     return (radio * radio) * Math.PI
 }
 
+function alturaTriangulo(lado1, lado2, lado3){
+    var ladoIgual;
+    var base;
+    if(lado1 === lado2){
+        ladoIgual = lado1;
+        base = lado3;
+    }else if(lado1 === lado3){
+        ladoIgual = lado1;
+        base = lado2;
+    }else if(lado2 === lado3){
+        ladoIgual = lado2;
+        base = lado1;
+    }else{
+        return;
+    }
+    return Math.sqrt((ladoIgual ** 2) - ((base ** 2) / 4))    
+}
+
 
 // Aquí interactuamos con el HTML
 function calcularPerimetroCuadrado(){
